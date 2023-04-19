@@ -10,4 +10,4 @@ RUN pip install --no-cache-dir -r /tmp/requirements.txt
 COPY ./app /app
 
 #ENTRYPOINT ["gunicorn", "app.main:app", "-k uvicorn.workers.UvicornWorker"]
-ENTRYPOINT ["gunicorn", "app.main:app", "-k app.ServerlessUvicornWorker"]
+ENTRYPOINT ["gunicorn", "app.main:app", "-k app.main.ServerlessUvicornWorker"]
